@@ -1,101 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <default name="cr"
-           fetch="git://github.com/" />
+  <remote  name="cr"
+           fetch="git://github.com/"
+           review="androidhosting.org:8080" />
 
-  <project path="build" name="CarbonDev/android_build"  revision="jb2">
+  <default revision="refs/tags/android-4.2.2_r1"
+           remote="aosp"
+           sync-j="4" />
+
+  <project path="build" name="CarbonDev/android_build" remote="cr" revision="jb2">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="android" name="CarbonDev/android"  revision="jb2" />
-  <project path="bionic" name="CarbonDev/android_bionic"  revision="jb2" />
-  <project path="dalvik" name="CarbonDev/android_dalvik"  revision="jb2" />
-  <project path="development" name="CarbonDev/android_development"  revision="jb2" />
-  <project path="device/asus/grouper" name="CarbonDev/android_device_asus_grouper"  revision="jb2" />
-  <project path="device/asus/tilapia" name="CarbonDev/android_device_asus_tilapia"  revision="jb2" />
-  <project path="device/htc/endeavoru" name="CarbonDev/android_device_htc_endeavoru"  revision="jb2" />
-  <project path="device/htc/m7" name="CarbonDev/android_device_htc_m7"  revision="jb2" />
-  <project path="device/htc/ville" name="CarbonDev/android_device_htc_ville"  revision="jb2" />
-  <project path="device/lge/mako" name="CarbonDev/android_device_lge_mako"  revision="jb2" />
-  <project path="device/motorola/maserati" name="CarbonDev/android_device_motorola_maserati"  revision="jb2" />
-  <project path="device/motorola/solana" name="CarbonDev/android_device_motorola_solana"  revision="jb2" />
-  <project path="device/motorola/spyder" name="CarbonDev/android_device_motorola_spyder"  revision="jb2" />
-  <project path="device/motorola/targa" name="CarbonDev/android_device_motorola_targa"  revision="jb2" />
-  <project path="device/motorola/umts_spyder" name="CarbonDev/android_device_motorola_umts_spyder"  revision="jb2" />
-  <project path="device/motorola/omap4-common" name="CarbonDev/android_device_motorola_omap4-common"  revision="jb2" />
-  <project path="device/samsung/celox-common" name="CarbonDev/android_device_samsung_celox-common"  revision="jb2" />
-  <project path="device/samsung/d2-common" name="CarbonDev/android_device_samsung_d2-common"  revision="jb2" />
-  <project path="device/samsung/crespo" name="CarbonDev/android_device_samsung_crespo"  revision="jb2" />
-  <project path="device/samsung/d2att" name="CarbonDev/android_device_samsung_d2att"  revision="jb2" />
-  <project path="device/samsung/d2cri" name="CarbonDev/android_device_samsung_d2cri"  revision="jb2" />
-  <project path="device/samsung/d2mtr" name="CarbonDev/android_device_samsung_d2mtr"  revision="jb2" />
-  <project path="device/samsung/d2spr" name="CarbonDev/android_device_samsung_d2spr"  revision="jb2" />
-  <project path="device/samsung/d2tmo" name="CarbonDev/android_device_samsung_d2tmo"  revision="jb2" />
-  <project path="device/samsung/d2usc" name="CarbonDev/android_device_samsung_d2usc"  revision="jb2" />
-  <project path="device/samsung/d2vzw" name="CarbonDev/android_device_samsung_d2vzw"  revision="jb2" />
-  <project path="device/samsung/d710" name="CarbonDev/android_device_samsung_d710"  revision="jb2" />
-  <project path="device/samsung/galaxys2-common" name="CarbonDev/android_device_samsung_galaxys2-common"  revision="jb2" />
-  <project path="device/samsung/hercules" name="CarbonDev/android_device_samsung_hercules"  revision="jb2" />
-  <project path="device/samsung/infuse4g" name="CarbonDev/android_device_samsung_infuse4g"  revision="jb2" />
-  <project path="device/samsung/i777" name="CarbonDev/android_device_samsung_i777"  revision="jb2" />
-  <project path="device/samsung/i605" name="CarbonDev/android_device_samsung_i605"  revision="jb2" />
-  <project path="device/samsung/l900" name="CarbonDev/android_device_samsung_l900"  revision="jb2" />
-  <project path="device/samsung/i9100" name="CarbonDev/android_device_samsung_i9100"  revision="jb2" />
-  <project path="device/samsung/i9300" name="CarbonDev/android_device_samsung_i9300"  revision="jb2" />
-  <project path="device/samsung/i9305" name="CarbonDev/android_device_samsung_i9305"  revision="jb2" />
-  <project path="device/samsung/maguro" name="CarbonDev/android_device_samsung_maguro"  revision="jb2" />
-  <project path="device/samsung/manta" name="CarbonDev/android_device_samsung_manta"  revision="jb2" />
-  <project path="device/samsung/msm8960-common" name="CarbonDev/android_device_samsung_msm8960-common"  revision="jb2" />
-  <project path="device/samsung/msm8660-common" name="CarbonDev/android_device_samsung_msm8660-common"  revision="jb2" />
-  <project path="device/samsung/n7000" name="CarbonDev/android_device_samsung_n7000"  revision="jb2" />
-  <project path="device/samsung/n7100" name="CarbonDev/android_device_samsung_n7100"  revision="jb2" />
-  <project path="device/samsung/quincytmo" name="CarbonDev/android_device_samsung_quincytmo"  revision="jb2" />
-  <project path="device/samsung/skyrocket" name="CarbonDev/android_device_samsung_skyrocket"  revision="jb2" />
-  <project path="device/samsung/smdk4412-common" name="CarbonDev/android_device_samsung_smdk4412-common"  revision="jb2" />
-  <project path="device/samsung/toro" name="CarbonDev/android_device_samsung_toro"  revision="jb2" />
-  <project path="device/samsung/toroplus" name="CarbonDev/android_device_samsung_toroplus"  revision="jb2" />
-  <project path="device/samsung/t0lteatt" name="CarbonDev/android_device_samsung_t0lteatt"  revision="jb2" />
-  <project path="device/samsung/t0ltetmo" name="CarbonDev/android_device_samsung_t0ltetmo"  revision="jb2" />
-  <project path="device/samsung/t0ltecdma" name="CarbonDev/android_device_samsung_t0ltecdma"  revision="jb2" />
-  <project path="device/samsung/tuna" name="CarbonDev/android_device_samsung_tuna"  revision="jb2" />
-  <project path="external/armzipalign" name="CarbonDev/platform_external_armzipalign"  revision="master" />
-  <project path="external/bluetooth/bluedroid" name="CarbonDev/android_external_bluetooth_bluedroid"  revision="jb2" />
-  <project path="external/busybox" name="CarbonDev/android_external_busybox"  revision="jb2" />
-  <project path="external/dnsmasq" name="CarbonDev/external_dnsmasq"  revision="jb2" />
-  <project path="external/oprofile" name="CarbonDev/android_external_oprofile"  revision="jb2" />
-  <project path="external/skia" name="CarbonDev/android_external_skia"  revision="jb2" />
-  <project path="external/webkit" name="CarbonDev/android_external_webkit"  revision="jb2" />
-  <project path="external/wpa_supplicant_8" name="CarbonDev/android_external_wpa_supplicant_8"  revision="jb2" />
-  <project path="frameworks/av" name="CarbonDev/android_frameworks_av"  revision="jb2" />
-  <project path="frameworks/base" name="CarbonDev/android_frameworks_base"  revision="jb2" />
-  <project path="frameworks/native" name="CarbonDev/android_frameworks_native"  revision="jb2" />
-  <project path="frameworks/opt/telephony" name="CarbonDev/android_frameworks_opt_telephony"  revision="jb2" />
-  <project path="frameworks/rs" name="CarbonDev/frameworks_rs"  revision="jb2" />
-  <project path="hardware/qcom/display" name="CarbonDev/android_hardware_qcom_display"  revision="jb2" />
-  <project path="hardware/qcom/display-caf" name="CarbonDev/android_hardware_qcom_display-caf"  revision="jb2" />
-  <project path="hardware/qcom/media" name="CarbonDev/android_hardware_qcom_media"  revision="jb2" />
-  <project path="hardware/ti/omap4xxx" name="CarbonDev/android_hardware_ti_omap4xxx"  revision="jb2" />
-  <project path="kernel/samsung/d2" name="CarbonDev/android_kernel_samsung_d2"  revision="cm-10.1" />
-  <project path="kernel/samsung/smdk4210" name="CarbonDev/android_kernel_samsung_smdk4210"  revision="jb2" />
-  <project path="kernel/samsung/smdk4412" name="CarbonDev/android_kernel_samsung_smdk4412"  revision="jb2" />
-  <project path="libcore" name="CarbonDev/android_libcore"  revision="jb2" />
-  <project path="packages/apps/Contacts" name="CarbonDev/android_packages_apps_Contacts"  revision="jb2" />
-  <project path="packages/apps/Email" name="CarbonDev/android_packages_apps_Email"  revision="jb2" />
-  <project path="packages/apps/Launcher2" name="CarbonDev/android_packages_apps_Launcher2"  revision="jb2" />
-  <project path="packages/apps/Mms" name="CarbonDev/android_packages_apps_Mms"  revision="jb2" />
-  <project path="packages/apps/Nfc" name="CarbonDev/android_packages_apps_Nfc"  revision="jb2" />
-  <project path="packages/apps/Phone" name="CarbonDev/android_packages_apps_Phone"  revision="jb2" />
-  <project path="packages/apps/Settings" name="CarbonDev/android_packages_apps_Settings"  revision="jb2" />
-  <project path="packages/apps/Wallpapers" name="CarbonDev/android_packages_apps_Carbon_Wallpapers"  revision="jb2" />
-  <project path="packages/inputmethods/LatinIME" name="CarbonDev/android_packages_inputmethods_LatinIME"  revision="jb2" />
-  <project path="packages/providers/ContactsProvider" name="CarbonDev/android_packages_providers_ContactsProvider"  revision="jb2" />
-  <project path="packages/providers/DownloadProvider" name="CarbonDev/packages_providers_DownloadProvider"  revision="jb2" />
-  <project path="prebuilts/gcc/linux-x86/arm" name="CarbonDev/android_toolchain_4.4.3"  revision="jb2" />
-  <project path="prebuilts/misc" name="CarbonDev/android_prebuilts_misc"  revision="jb2" />
-  <project path="system/core" name="CarbonDev/android_system_core"  revision="jb2" />
-  <project path="system/extras" name="CarbonDev/android_system_extras"  revision="jb2" />
-  <project path="vendor/broadcom" name="CarbonDev/proprietary_vendor_broadcom"  revision="jb2" />
-  <project path="vendor/carbon" name="CarbonDev/android_vendor_carbon"  revision="jb2" />
-  <project path="vendor/lge" name="CarbonDev/android_vendor_lge"  revision="jb2" />
-  <project path="vendor/samsung" name="CarbonDev/proprietary_vendor_samsung"  revision="jb2" />
-  <project path="vendor/qcom" name="CarbonDev/proprietary_vendor_qcom"  revision="jb2" />
+  <project path="android" name="CarbonDev/android" remote="cr" revision="jb2" />
+  <project path="bionic" name="CarbonDev/android_bionic" remote="cr" revision="jb2" />
+  <project path="dalvik" name="CarbonDev/android_dalvik" remote="cr" revision="jb2" />
+  <project path="development" name="CarbonDev/android_development" remote="cr" revision="jb2" />
+  <project path="device/asus/grouper" name="CarbonDev/android_device_asus_grouper" remote="cr" revision="jb2" />
+  <project path="device/asus/tilapia" name="CarbonDev/android_device_asus_tilapia" remote="cr" revision="jb2" />
+  <project path="device/htc/endeavoru" name="CarbonDev/android_device_htc_endeavoru" remote="cr" revision="jb2" />
+  <project path="device/htc/m7" name="CarbonDev/android_device_htc_m7" remote="cr" revision="jb2" />
+  <project path="device/htc/ville" name="CarbonDev/android_device_htc_ville" remote="cr" revision="jb2" />
+  <project path="device/lge/mako" name="CarbonDev/android_device_lge_mako" remote="cr" revision="jb2" />
+  <project path="device/motorola/maserati" name="CarbonDev/android_device_motorola_maserati" remote="cr" revision="jb2" />
+  <project path="device/motorola/solana" name="CarbonDev/android_device_motorola_solana" remote="cr" revision="jb2" />
+  <project path="device/motorola/spyder" name="CarbonDev/android_device_motorola_spyder" remote="cr" revision="jb2" />
+  <project path="device/motorola/targa" name="CarbonDev/android_device_motorola_targa" remote="cr" revision="jb2" />
+  <project path="device/motorola/umts_spyder" name="CarbonDev/android_device_motorola_umts_spyder" remote="cr" revision="jb2" />
+  <project path="device/motorola/omap4-common" name="CarbonDev/android_device_motorola_omap4-common" remote="cr" revision="jb2" />
+  <project path="device/samsung/celox-common" name="CarbonDev/android_device_samsung_celox-common" remote="cr" revision="jb2" />
+  <project path="device/samsung/d2-common" name="CarbonDev/android_device_samsung_d2-common" remote="cr" revision="jb2" />
+  <project path="device/samsung/crespo" name="CarbonDev/android_device_samsung_crespo" remote="cr" revision="jb2" />
+  <project path="device/samsung/d2att" name="CarbonDev/android_device_samsung_d2att" remote="cr" revision="jb2" />
+  <project path="device/samsung/d2cri" name="CarbonDev/android_device_samsung_d2cri" remote="cr" revision="jb2" />
+  <project path="device/samsung/d2mtr" name="CarbonDev/android_device_samsung_d2mtr" remote="cr" revision="jb2" />
+  <project path="device/samsung/d2spr" name="CarbonDev/android_device_samsung_d2spr" remote="cr" revision="jb2" />
+  <project path="device/samsung/d2tmo" name="CarbonDev/android_device_samsung_d2tmo" remote="cr" revision="jb2" />
+  <project path="device/samsung/d2usc" name="CarbonDev/android_device_samsung_d2usc" remote="cr" revision="jb2" />
+  <project path="device/samsung/d2vzw" name="CarbonDev/android_device_samsung_d2vzw" remote="cr" revision="jb2" />
+  <project path="device/samsung/d710" name="CarbonDev/android_device_samsung_d710" remote="cr" revision="jb2" />
+  <project path="device/samsung/galaxys2-common" name="CarbonDev/android_device_samsung_galaxys2-common" remote="cr" revision="jb2" />
+  <project path="device/samsung/hercules" name="CarbonDev/android_device_samsung_hercules" remote="cr" revision="jb2" />
+  <project path="device/samsung/infuse4g" name="CarbonDev/android_device_samsung_infuse4g" remote="cr" revision="jb2" />
+  <project path="device/samsung/i777" name="CarbonDev/android_device_samsung_i777" remote="cr" revision="jb2" />
+  <project path="device/samsung/i605" name="CarbonDev/android_device_samsung_i605" remote="cr" revision="jb2" />
+  <project path="device/samsung/l900" name="CarbonDev/android_device_samsung_l900" remote="cr" revision="jb2" />
+  <project path="device/samsung/i9100" name="CarbonDev/android_device_samsung_i9100" remote="cr" revision="jb2" />
+  <project path="device/samsung/i9300" name="CarbonDev/android_device_samsung_i9300" remote="cr" revision="jb2" />
+  <project path="device/samsung/i9305" name="CarbonDev/android_device_samsung_i9305" remote="cr" revision="jb2" />
+  <project path="device/samsung/maguro" name="CarbonDev/android_device_samsung_maguro" remote="cr" revision="jb2" />
+  <project path="device/samsung/manta" name="CarbonDev/android_device_samsung_manta" remote="cr" revision="jb2" />
+  <project path="device/samsung/msm8960-common" name="CarbonDev/android_device_samsung_msm8960-common" remote="cr" revision="jb2" />
+  <project path="device/samsung/msm8660-common" name="CarbonDev/android_device_samsung_msm8660-common" remote="cr" revision="jb2" />
+  <project path="device/samsung/n7000" name="CarbonDev/android_device_samsung_n7000" remote="cr" revision="jb2" />
+  <project path="device/samsung/n7100" name="CarbonDev/android_device_samsung_n7100" remote="cr" revision="jb2" />
+  <project path="device/samsung/quincytmo" name="CarbonDev/android_device_samsung_quincytmo" remote="cr" revision="jb2" />
+  <project path="device/samsung/skyrocket" name="CarbonDev/android_device_samsung_skyrocket" remote="cr" revision="jb2" />
+  <project path="device/samsung/smdk4412-common" name="CarbonDev/android_device_samsung_smdk4412-common" remote="cr" revision="jb2" />
+  <project path="device/samsung/toro" name="CarbonDev/android_device_samsung_toro" remote="cr" revision="jb2" />
+  <project path="device/samsung/toroplus" name="CarbonDev/android_device_samsung_toroplus" remote="cr" revision="jb2" />
+  <project path="device/samsung/t0lteatt" name="CarbonDev/android_device_samsung_t0lteatt" remote="cr" revision="jb2" />
+  <project path="device/samsung/t0ltetmo" name="CarbonDev/android_device_samsung_t0ltetmo" remote="cr" revision="jb2" />
+  <project path="device/samsung/t0ltecdma" name="CarbonDev/android_device_samsung_t0ltecdma" remote="cr" revision="jb2" />
+  <project path="device/samsung/tuna" name="CarbonDev/android_device_samsung_tuna" remote="cr" revision="jb2" />
+  <project path="external/armzipalign" name="CarbonDev/platform_external_armzipalign" remote="cr" revision="master" />
+  <project path="external/bluetooth/bluedroid" name="CarbonDev/android_external_bluetooth_bluedroid" remote="cr" revision="jb2" />
+  <project path="external/busybox" name="CarbonDev/android_external_busybox" remote="cr" revision="jb2" />
+  <project path="external/dnsmasq" name="CarbonDev/external_dnsmasq" remote="cr" revision="jb2" />
+  <project path="external/oprofile" name="CarbonDev/android_external_oprofile" remote="cr" revision="jb2" />
+  <project path="external/skia" name="CarbonDev/android_external_skia" remote="cr" revision="jb2" />
+  <project path="external/webkit" name="CarbonDev/android_external_webkit" remote="cr" revision="jb2" />
+  <project path="external/wpa_supplicant_8" name="CarbonDev/android_external_wpa_supplicant_8" remote="cr" revision="jb2" />
+  <project path="frameworks/av" name="CarbonDev/android_frameworks_av" remote="cr" revision="jb2" />
+  <project path="frameworks/base" name="CarbonDev/android_frameworks_base" remote="cr" revision="jb2" />
+  <project path="frameworks/native" name="CarbonDev/android_frameworks_native" remote="cr" revision="jb2" />
+  <project path="frameworks/opt/telephony" name="CarbonDev/android_frameworks_opt_telephony" remote="cr" revision="jb2" />
+  <project path="frameworks/rs" name="CarbonDev/frameworks_rs" remote="cr" revision="jb2" />
+  <project path="hardware/qcom/display" name="CarbonDev/android_hardware_qcom_display" remote="cr" revision="jb2" />
+  <project path="hardware/qcom/display-caf" name="CarbonDev/android_hardware_qcom_display-caf" remote="cr" revision="jb2" />
+  <project path="hardware/qcom/media" name="CarbonDev/android_hardware_qcom_media" remote="cr" revision="jb2" />
+  <project path="hardware/ti/omap4xxx" name="CarbonDev/android_hardware_ti_omap4xxx" remote="cr" revision="jb2" />
+  <project path="kernel/samsung/d2" name="CarbonDev/android_kernel_samsung_d2" remote="cr" revision="cm-10.1" />
+  <project path="kernel/samsung/smdk4210" name="CarbonDev/android_kernel_samsung_smdk4210" remote="cr" revision="jb2" />
+  <project path="kernel/samsung/smdk4412" name="CarbonDev/android_kernel_samsung_smdk4412" remote="cr" revision="jb2" />
+  <project path="libcore" name="CarbonDev/android_libcore" remote="cr" revision="jb2" />
+  <project path="packages/apps/Contacts" name="CarbonDev/android_packages_apps_Contacts" remote="cr" revision="jb2" />
+  <project path="packages/apps/Email" name="CarbonDev/android_packages_apps_Email" remote="cr" revision="jb2" />
+  <project path="packages/apps/Launcher2" name="CarbonDev/android_packages_apps_Launcher2" remote="cr" revision="jb2" />
+  <project path="packages/apps/Mms" name="CarbonDev/android_packages_apps_Mms" remote="cr" revision="jb2" />
+  <project path="packages/apps/Nfc" name="CarbonDev/android_packages_apps_Nfc" remote="cr" revision="jb2" />
+  <project path="packages/apps/Phone" name="CarbonDev/android_packages_apps_Phone" remote="cr" revision="jb2" />
+  <project path="packages/apps/Settings" name="CarbonDev/android_packages_apps_Settings" remote="cr" revision="jb2" />
+  <project path="packages/apps/Wallpapers" name="CarbonDev/android_packages_apps_Carbon_Wallpapers" remote="cr" revision="jb2" />
+  <project path="packages/inputmethods/LatinIME" name="CarbonDev/android_packages_inputmethods_LatinIME" remote="cr" revision="jb2" />
+  <project path="packages/providers/ContactsProvider" name="CarbonDev/android_packages_providers_ContactsProvider" remote="cr" revision="jb2" />
+  <project path="packages/providers/DownloadProvider" name="CarbonDev/packages_providers_DownloadProvider" remote="cr" revision="jb2" />
+  <project path="prebuilts/gcc/linux-x86/arm" name="CarbonDev/android_toolchain_4.4.3" remote="cr" revision="jb2" />
+  <project path="prebuilts/misc" name="CarbonDev/android_prebuilts_misc" remote="cr" revision="jb2" />
+  <project path="system/core" name="CarbonDev/android_system_core" remote="cr" revision="jb2" />
+  <project path="system/extras" name="CarbonDev/android_system_extras" remote="cr" revision="jb2" />
+  <project path="vendor/broadcom" name="CarbonDev/proprietary_vendor_broadcom" remote="cr" revision="jb2" />
+  <project path="vendor/carbon" name="CarbonDev/android_vendor_carbon" remote="cr" revision="jb2" />
+  <project path="vendor/lge" name="CarbonDev/android_vendor_lge" remote="cr" revision="jb2" />
+  <project path="vendor/samsung" name="CarbonDev/proprietary_vendor_samsung" remote="cr" revision="jb2" />
+  <project path="vendor/qcom" name="CarbonDev/proprietary_vendor_qcom" remote="cr" revision="jb2" />
 </manifest>
