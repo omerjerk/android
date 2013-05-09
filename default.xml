@@ -11,7 +11,7 @@
 
   <remote  name="cr"
            fetch="git://github.com/"
-           review="androidhosting.org:8080" />
+           review="dg4prez.dyndns.org:8080/r/" />
 
   <remote  name="tm"
            fetch="git://github.com/TheMuppets/" />
